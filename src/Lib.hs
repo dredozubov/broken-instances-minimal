@@ -1,4 +1,4 @@
-{-# LANGUAGE DataKinds, FlexibleInstances, MultiParamTypeClasses #-}
+{-# LANGUAGE DataKinds, FlexibleInstances, MultiParamTypeClasses, TypeFamilies #-}
 
 module Lib where
 
@@ -7,6 +7,4 @@ import Class
 
 newtype Local = Local ()
 
-instance C1 () Local
-
-instance C2 "foo" Local
+instance C Local ()
